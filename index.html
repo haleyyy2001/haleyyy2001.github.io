@@ -4,27 +4,47 @@
     <meta charset="UTF-8">
     <title>My Personal Website</title>
     <style>
-      .container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        width: 80%;
-        margin: 0 auto;
+      body {
+        background-color: lightblue;
+        padding: 0;
+        margin: 0;
       }
 
-      .section {
-        width: 30%;
+      .container {
+        display: flex;
+        height: 100vh;
+        width: 100%;
+      }
+
+      .sidebar {
+        background-color: purple;
+        color: white;
+        width: 200px;
         padding: 20px;
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: white;
+        color: black;
+        width: calc(100% - 200px);
+        padding: 20px;
+        text-align: center;
+      }
+
+      .category {
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        margin-top: 0;
       }
     </style>
   </head>
   <body>
-    <header>
-      <h1>Welcome to My Personal Website</h1>
-    </header>
-    <main>
-      <div class="container">
-        <div class="section">
+    <div class="container">
+      <div class="sidebar">
+        <div class="category">
           <h2>Skills</h2>
           <ul>
             <li>Skill 1</li>
@@ -32,7 +52,7 @@
             <li>Skill 3</li>
           </ul>
         </div>
-        <div class="section">
+        <div class="category">
           <h2>Experience</h2>
           <ul>
             <li>Job 1 (Year - Year)</li>
@@ -40,7 +60,7 @@
             <li>Job 3 (Year - Year)</li>
           </ul>
         </div>
-        <div class="section">
+        <div class="category">
           <h2>Research</h2>
           <ul>
             <li>Research 1</li>
@@ -49,10 +69,13 @@
           </ul>
         </div>
       </div>
-    </main>
-    <footer>
-      <p>Copyright © [Your Name] [Year]. All rights reserved.</p>
-    </footer>
+      <div class="main-content">
+        <h1>Welcome to My Personal Website</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel varius velit. Aliquam
+          aliquam ante quis sem varius, ac tempor libero malesuada.
+        </p>
+      </div>
+    </div>
   </body>
 </html>
-
