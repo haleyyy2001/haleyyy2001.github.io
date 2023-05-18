@@ -1,47 +1,98 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Art Gallery</title>
+  <title>Your Website Title</title>
   <style>
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 20px;
+    /* Reset some default browser styles */
+    body, h1, h2, h3, h4, h5, h6, p, ul, li {
+      margin: 0;
+      padding: 0;
     }
 
-    .gallery-item {
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Header */
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
       text-align: center;
     }
 
-    .gallery-item img {
-      max-width: 100%;
-      height: auto;
+    /* Navigation */
+    nav {
+      background-color: #666;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 5px 10px;
+    }
+
+    /* Main content area */
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <h1>My Art Gallery</h1>
+  <header>
+    <h1>Your Website Title</h1>
+  </header>
 
-  <div class="gallery">
-    <div class="gallery-item">
-      <img src="path/to/image1.jpg" alt="Artwork 1">
-      <h3>Artwork 1</h3>
-      <p>Description of artwork 1.</p>
-    </div>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
 
-    <div class="gallery-item">
-      <img src="path/to/image2.jpg" alt="Artwork 2">
-      <h3>Artwork 2</h3>
-      <p>Description of artwork 2.</p>
-    </div>
+  <main>
+    <h1>Welcome to Your Website!</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper enim at purus cursus, ut eleifend nisl lobortis. Fusce pharetra dui eget sapien convallis, nec eleifend orci pulvinar. Quisque varius finibus sem, ac iaculis purus.</p>
+    <p>Vivamus id facilisis dui, non commodo nulla. Maecenas finibus erat non erat scelerisque, at tempor lorem auctor. Aliquam ultricies, enim a eleifend euismod, lorem nisl faucibus dui, nec ullamcorper justo ex sit amet dui.</p>
+  </main>
 
-    <div class="gallery-item">
-      <img src="path/to/image3.jpg" alt="Artwork 3">
-      <h3>Artwork 3</h3>
-      <p>Description of artwork 3.</p>
-    </div>
-
-    <!-- Add more gallery items as needed -->
-  </div>
+  <footer>
+    <p>&copy; 2023 Your Website. All rights reserved.</p>
+  </footer>
 </body>
 </html>
