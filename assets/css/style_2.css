@@ -1,0 +1,89 @@
+html {
+    background-color: #e8eaf6; /* Soothing light indigo background */
+}
+
+body {
+    margin: 40px auto;
+    padding: 30px;
+    text-align: left;
+    color: #37474f; /* A darker shade of grey for contrast */
+    max-width: 900px; /* Slightly narrower for focus */
+    background-color: #fff;
+    border-radius: 10px; /* More pronounced border radius */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Deeper shadow for a floating effect */
+    font-family: 'Arial', sans-serif;
+}
+
+.name {
+    font-size: 32px;
+    color: #5c6bc0; /* Deep blue for name to stand out */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+a {
+    color: #7986cb; /* Lighter blue for links */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ef5350; /* Bright red for hover to grab attention */
+    text-decoration: underline;
+}
+
+h1, h2, h3 {
+    color: #3949ab; /* Consistent color for headers, using a variant of indigo */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: 2.2em;
+    border-bottom: 3px solid #c5cae9; /* Light indigo bottom border */
+    padding-bottom: 5px;
+}
+
+h2 {
+    font-size: 1.8em;
+    border-bottom: 2px solid #c5cae9;
+}
+
+h3 {
+    font-size: 1.4em;
+    border-bottom: 1px solid #c5cae9;
+}
+
+p {
+    line-height: 1.7;
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+}
+
+ul, ol {
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+}
+
+li {
+    margin-top: 0.7em;
+}
+
+div#footer {
+    color: #9fa8da; /* Light indigo for footer */
+    font-size: 0.95em;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #c5cae9;
+    margin-top: 40px;
+}
+
+.project-item:hover, .project-item:focus, .project-item:active {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+    transform: scale(1.03);
+    transition: all 0.3s ease;
+}
+
+@media print {
+    /* Adjust print styles as needed */
+}
