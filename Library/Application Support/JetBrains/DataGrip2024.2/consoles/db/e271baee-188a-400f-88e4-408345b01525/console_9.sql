@@ -1,1 +1,0 @@
-select * from Batting where playerid="willite01" and teamid="BOS"
