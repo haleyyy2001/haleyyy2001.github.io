@@ -4,223 +4,1016 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Huilin Tai's Portfolio</title>
-    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-    <!-- Additional Scripts and Links (Analytics, Fonts, etc.) -->
+    <title>Huilin Tai - Research Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        :root {
+            --primary-color: #6bb6ff;
+            --text-primary: #2c3e50;
+            --text-secondary: #34495e;
+            --text-light: #7f8c8d;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --border-color: #e9ecef;
+            --accent-color: #e67e22;
+            --link-color: #ff6b35;
+            --prof-color: #ff8c00;
+            --success-color: #27ae60;
+            --shadow: 0 3px 15px rgba(0,0,0,0.1);
+            --gradient-primary: linear-gradient(135deg, #87ceeb, #6bb6ff);
+            --gradient-accent: linear-gradient(135deg, #f39c12, #e67e22);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.6;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background-attachment: fixed;
+            font-size: 14px;
         }
-        .header-content {
-            text-align: center;
-            padding: 20px;
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
-        .profile-picture {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
+
+        /* Navigation */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
-        .main-nav {
-            text-align: center;
-            padding-bottom: 20px;
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            padding: 18px 0;
         }
-        .nav-link {
-            margin: 0 10px;
+
+        .nav-menu {
+            display: flex;
+            gap: 2px;
+            list-style: none;
+            background: var(--bg-secondary);
+            padding: 6px;
+            border-radius: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-item {
+            color: var(--text-secondary);
             text-decoration: none;
-            color: #333;
+            font-weight: 500;
+            font-size: 0.85rem;
+            padding: 8px 14px;
+            border-radius: 16px;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+            display: block;
         }
-        .nav-link:hover {
-            color: #007bff;
+
+        .nav-item:hover {
+            background: var(--gradient-primary);
+            color: white;
+            transform: translateY(-1px);
         }
-        section {
-            padding: 20px;
+
+        .nav-item.active {
+            background: var(--gradient-primary);
+            color: white;
+            box-shadow: 0 2px 8px rgba(93, 173, 226, 0.3);
         }
-        h2 {
-            color: #007bff;
+
+        /* Header */
+        .header {
+            padding: 40px 0;
+            background: var(--bg-primary);
+            box-shadow: var(--shadow);
         }
-        footer {
+
+        .header-content {
+            display: grid;
+            grid-template-columns: 150px 1fr auto;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .profile-img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .header-info h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .header-info .subtitle {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 3px;
+        }
+
+        .header-info .affiliation {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            font-size: 0.85rem;
+        }
+
+        .contact-links a {
+            color: #FFA500;
+            text-decoration: none;
+            border-bottom: 1px dashed #FFA500;
+            transition: all 0.2s ease;
+        }
+
+        .contact-links a:hover {
+            color: #FF8C00;
+            border-bottom-color: #FF8C00;
+        }
+
+        /* General link styling */
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+
+        .lab-link {
+            color: #FFA500;
+            font-weight: 500;
+            text-decoration: none;
+            border-bottom: 1px dashed #FFA500;
+            transition: all 0.2s ease;
+        }
+
+        .lab-link:hover {
+            color: #FF8C00;
+            border-bottom-color: #FF8C00;
+            text-decoration: none;
+        }
+
+        .prof-name {
+            color: #FFA500;
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 1px dashed #FFA500;
+            transition: all 0.2s ease;
+        }
+
+        .prof-name:hover {
+            color: #FF8C00;
+            border-bottom-color: #FF8C00;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8f9fa;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .social-icons a:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Welcome Section */
+        .welcome {
+            background: var(--gradient-primary);
+            padding: 40px 0;
+            margin-bottom: 30px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .welcome::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+
+        .welcome-text {
+            max-width: 800px;
+            margin: 0 auto;
             text-align: center;
-            padding: 20px;
-            background-color: #f4f4f4;
-            margin-top: 20px;
+            font-size: 1rem;
+            line-height: 1.7;
+            position: relative;
+            z-index: 1;
         }
-        
+
+        .welcome h2 {
+            color: white;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Main Content Grid */
+        .main-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            padding: 0 0 40px 0;
+        }
+
+        /* Left Column */
+        .left-column {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        /* Right Column */
+        .right-column {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        /* Section Styles */
+        .section {
+            background: var(--bg-primary);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        .section:hover {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 12px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+        }
+
+        /* About */
+        .about-text {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        /* Experience */
+        .exp-item {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .exp-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 3px;
+        }
+
+        .exp-company {
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+        }
+
+        .exp-date {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .exp-title {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 5px;
+        }
+
+        .exp-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .exp-desc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .exp-desc li {
+            position: relative;
+            padding-left: 12px;
+            margin-bottom: 3px;
+        }
+
+        .exp-desc li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+
+        /* Publications */
+        .pub-item {
+            margin-bottom: 15px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .pub-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .pub-title {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: 3px;
+            line-height: 1.4;
+        }
+
+        .pub-authors {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-bottom: 2px;
+        }
+
+        .pub-authors strong {
+            color: var(--primary-color);
+        }
+
+        .pub-venue {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            gap: 15px;
+        }
+
+        .skill-category {
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 12px;
+            background: #fafbfc;
+        }
+
+        .skill-category h4 {
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+
+        .skill-tag {
+            background: white;
+            border: 1px solid var(--border-color);
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        /* Education */
+        .edu-item {
+            margin-bottom: 15px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .edu-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .edu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 3px;
+        }
+
+        .edu-school {
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+        }
+
+        .edu-date {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .edu-degree {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 2px;
+        }
+
+        .edu-gpa {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        /* News */
+        .news-item {
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .news-date {
+            font-size: 0.8rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .news-content {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* Awards */
+        .award-item {
+            margin-bottom: 10px;
+            font-size: 0.85rem;
+        }
+
+        .award-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .award-name {
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        .award-org {
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 15px;
+            }
+
+            .main-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .contact-links {
+                align-items: center;
+            }
+
+            .social-icons {
+                justify-content: center;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Add IDs for sections */
+        #about { scroll-margin-top: 80px; }
+        #experience { scroll-margin-top: 80px; }
+        #publications { scroll-margin-top: 80px; }
+        #education { scroll-margin-top: 80px; }
+        #activities { scroll-margin-top: 80px; }
+        #contact { scroll-margin-top: 80px; }
     </style>
 </head>
 <body>
-  <header>
-    <div class="header-content">
-        <img src="assets/images/picc.jpg" alt="Huilin Tai" class="profile-picture">
-        <h1 class="name">Huilin Tai</h1>
-        <p class="email">huilin.tai@mail.mcgill.ca | ht2666@columbia.edu</p>
-    </div>
- 
-
-    <nav class="main-nav"> 
-        <a href="pdf/cv_huilin_tai.pdf" class="nav-link">CV</a>
-        <a href="https://github.com/haleyyy2001" class="nav-link">GitHub</a>
-        <a href="https://scholar.google.com/citations?user=rTtekREAAAAJ&hl=en" class="nav-link">Google Scholar</a>
-        <a href="https://www.linkedin.com/in/huilintai/" class="nav-link">LinkedIn</a>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <div class="nav-menu">
+                    <a href="#about" class="nav-item active">About</a>
+                    <a href="#experience" class="nav-item">Research</a>
+                    <a href="#publications" class="nav-item">Publications</a>
+                    <a href="Huilin_Tai_cv.docx" class="nav-item" target="_blank">CV</a>
+                    <a href="blog.html" class="nav-item">Blog</a>
+                    <a href="#contact" class="nav-item">Contact</a>
+                </div>
+            </div>
+        </div>
     </nav>
-  </header>
-    <!-- Biography Section -->
 
-    <section class="intro">
-       <div id="container">
-            <img src="hh.gif" id="walking-snail-right" class="walking-snail">
-            <img src="h.gif" id="walking-snail-left" class="walking-snail">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <img src="assets/images/picc.jpg" alt="Huilin Tai" class="profile-img">
+                
+                <div class="header-info">
+                    <h1>Huilin Tai</h1>
+                    <div class="subtitle">Second-year MS Student | ML Researcher | Data Scientist</div>
+                    <div class="affiliation">Columbia University, New York</div>
+                    <div style="font-size: 0.85rem; color: var(--text-secondary);">
+                        Foundation Models • Genomic ML • Vision-Language Models • Computational Biology
+                    </div>
+                </div>
+
+                <div class="contact-links">
+                    <a href="mailto:ht2666@columbia.edu">ht2666@columbia.edu</a>
+                    <div>(646) 866-9171</div>
+                    <div>New York, NY</div>
+                    <div class="social-icons">
+                        <a href="Huilin_Tai_cv.docx" title="CV"><i class="fas fa-file-pdf"></i></a>
+                        <a href="https://github.com/haleyyy2001" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://scholar.google.com/citations?user=rTtekREAAAAJ&hl=en" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                        <a href="https://www.linkedin.com/in/huilintai/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <h2>Biography</h2>
-        <p>
-            Welcome to my webpage! I'm <strong>Huilin Tai</strong>, a fourth-year bachelor student in <strong>Statistics and Computer Science</strong> at McGill University. I specialize in machine learning and data science, with a strong foundation in programming languages like Python, Java, C, Matlab, R, and Ocaml.
- 
-        </p>
-        <p>
-             My research journey has been a path filled with diverse and enriching experiences. It spans from theoretical computer science, with a focus on algorithm design in communication theory and the exploration of replicability in agnostic learning, to the practical application of machine learning in visual odometry, cell profiling, and spatial gene expression prediction. Additionally, my experience in statistical modeling for immunology research and survival analysis strengthened my skills in developing robust analytical frameworks and gave me opportunities to collaborate with brilliant researchers across various fields.
-        </p>
-        <p>
-           
-      I also actively participate in academic support as CS-helpdesk tutor and course assistant for courses such as Algebra, Probability, and Statistical Computation. This webpage is a glimpse into my academic and research interests - a space where I share my explorations and experiences in the captivating world of data and computation.
+    </header>
 
-
- 
-
-
-    </section>
- 
-        <!-- More content -->
-    </section>
-    <!-- Education Section -->
-    <section class="education">
-        <h2>Education</h2>
-        <div class="education-content">
-            <p><strong>McGill University, Montreal, QC, Canada</strong><br>
-            Bachelor of Science - Major in Statistics and Computer Science, GPA: 3.85 (Sep. 2020 - present)</p>
-            <!-- More content -->
+    <!-- Welcome Section -->
+    <section class="welcome">
+        <div class="container">
+            <div class="welcome-text">
+                <h2>Welcome to My Webpage</h2>
+                <p>
+                    I'm passionate about advancing the field of machine learning and computational biology through innovative research and practical applications. This webpage showcases my journey as a researcher, highlighting my publications, experiences, and ongoing work in developing cutting-edge solutions for complex biological and computational challenges. Feel free to explore my research, connect with me, or learn more about my academic and professional background.
+                </p>
+            </div>
         </div>
-    </section>
-
-<!-- Research Experience Section -->
-<section class="research-experience">
-    <h2>Research Experience</h2>
-
-    <!-- Group: McGill University Department of Computer Science -->
-    <div class="research-group">
-        <h3>McGill University Department of Computer Science</h3>
-
-        <div class="research-item">
-            <p><strong>Communication Complexity for Hamming Distance Estimation</strong> (Sep. 2023 - Jan 2024, supervised by Professor Hatami): Developed an algorithm to efficiently estimate Hamming distances, significantly reducing communication complexity.</p>
-        </div>
-
-        <div class="research-item">
-            <p><strong>Excess-Error Dependent Replicability</strong> (Jan 2024 - present, supervised by Professor Hatami): Explored replicability in agnostic learning with a focus on empirical data-based error approximation.</p>
-        </div>
-
-        <div class="research-item">
-            <p><strong>Unsupervised Learning for Cell Profiling</strong> (Jan. 2023 - Jan. 2024, Ding Lab): Employed unsupervised models for accurate cell profiling and transcriptional signature identification in PBMCs.</p>
-        </div>
-
-        <div class="research-item">
-            <p><strong>Computational Analysis and Website Enhancement of Cellar</strong> (June. 2023 - Sep. 2023, Ding Lab): Enhanced data visualization capabilities of Cellar, focusing on neuroimmunological disease data.</p>
-        </div> 
-
-        <div class="research-item">
-            <p><strong>Machine Learning Application for Sex Prediction</strong> (Nov. 2022 - April. 2024, Ding Lab): Developed machine learning classifiers for sex prediction based on gene expressions, achieving high accuracy with advanced feature selection and neural network optimization.</p>
-        </div>
-
-        <div class="research-item">
-            <p><strong>Deep Learning Model for Spatial Gene Expression Prediction</strong> (June. 2023 - Sep. 2023, Ding Lab): Designed a Variational Autoencoder for spatial gene expression prediction, implementing novel visualization methods for genomic feature interaction in tissue space.</p>
-        </div>
-
-        
-    </div>
-
-    <!-- Group: University at Buffalo -->
-    <div class="research-group">
-        <h3>University at Buffalo</h3>
-
-        <div class="research-item">
-            <p><strong>Visual Odometry Enhancement</strong> (June 2023 - Feb. 2024): Integrated a Vision Transformer into the TartanVO model, optimizing visual odometry performance in real-world applications.</p>
-        </div>
-    </div>
-
-    <!-- Group: McGill University Department of Mathematics and Statistics -->
-    <div class="research-group">
-        <h3>McGill University Department of Mathematics and Statistics</h3>
-
-        <div class="research-item">
-            <p><strong>NP Binding Process Quantification</strong> (Nov. 2022 - April. 2023, Khadra Lab): Applied probability models to analyze nanoparticle binding dynamics in T-cell activation and therapy research.</p>
-        </div>
-
-        <div class="research-item">
-            <p><strong>Quantification for Multivalent Nanoparticle T-cell Therapies</strong> (May. 2023 - Jan. 2024, Khadra Lab): Investigated selective binding phenomena in T-cell therapies using mathematical models and simulations.</p>
-        </div>
-    </div>
-
-    <!-- Group: McGill University Faculty of Science -->
-    <div class="research-group">
-        <h3>McGill University Faculty of Science</h3>
-
-        <div class="research-item">
-            <p><strong>Bayesian and GLM for Survival Analysis</strong> (Jan. 2023 - June 2023): Applied Bayesian and Generalized Linear Models in advanced survival analysis under the McGill DRP program.</p>
-        </div>
-    </div>
-
-    <!-- Group: Harbin Medical University -->
-    <div class="research-group">
-        <h3>Harbin Medical University</h3>
-
-        <div class="research-item">
-            <p><strong>Survival Analysis in Hepatocellular Carcinoma</strong> (May 2022 - Dec. 2022): Developed survival analysis to assess the impact of targeting uridine-cytidine kinase 2 on immune response in hepatocellular carcinoma, including an interactive monogram for 1-year, 3-year, and 5-year survival analysis using R.</p>
-        </div>
-
-        <div class="research-item">
-            <p><strong>Study on SPARC Gene in Ovarian Cancer Prognosis</strong> (May 2023 - Feb. 2024): Led research on the SPARC gene's role in ovarian cancer prognosis, applying Kaplan-Meier survival analyses and data validation through log-rank tests, along with data extraction and analysis from UCSC XENA and GTEX databases.</p>
-        </div>
-
-</section>
-
-</section>
-
-    <!-- Publications Section -->
-    <section class="publications">
-        <h2>Publications</h2>
-        <ul>
-            <li>[1] Dehai Wu, Congyi Zhang, Guanqun Liao, Kaiming Leng, Bowen Dong, Yang Yu, Huilin Tai, Lining Huang,
-Feng Luo, Bin Zhang, Tiexiang Zhan, Qiuhui Hu, Sheng Tai. Targeting uridine–cytidine kinase 2 induced
-cell cycle arrest through dual mechanism and could improve the immune response of hepatocellular carcinoma.
-Cellular & Molecular Biology Letters, 105 (2022)</li>
-        
-        <li>[2] Xiaorong Guo, Huilin Tai, Xiaoqing Li, Peng Liu, Jin Liu, Shan Yu SPARC is a novelty prognostic biomarker for ovarian cancer and associated with immune signatures and drug response. Clinical and Experimental Obstetrics & Gynecology, 51 (2024)</li>
-        <li>[3] Adam M.R. Groh, Nina Caporicci-Dinucci, Brianna Lu, Maxime Bigotte, Elia Afanasiev, Joshua Gertsvolf, Dale J. Hatrock, Victoria Mamane, Sienna Drake, Huilin Tai, Jun Ding, Alyson Fournier, Catherine Larochelle, Jo Anne Stratton. Ependymal cells undergo an astrocyte-like gliosis in response to chronic and acute neuroinflammation. Journal of Neurochemistry (accepted)</li>
-        <li>[4] Pengliang Ji, Chuyang Xiao, Huilin Tai, Mingxiao Huo. T2VBench: Benchmarking Temporal Dynamics for Text-to-Video Generation. ACMMM 2024 Conference (2024 accept) </li>
-        </ul>
     </section>
 
-    <!-- Awards Section -->
-    <section class="awards">
-        <h2>Honors and Awards</h2>
-        <ul>
-            <li>Mackey-Glass Summer Research Bursary, McGill Faculty of Medicine, Apr. 2023</li>
-            <li>Hugh Brock Scholarship, McGill University, Sep. 2020</li>
-            <!-- More items -->
-        </ul>
-    </section>
+    <!-- Main Content -->
+    <main class="container">
+        <div class="main-content">
+            <!-- Left Column -->
+            <div class="left-column">
+                <!-- About -->
+                <section id="about" class="section">
+                    <h2 class="section-title">About</h2>
+                    <p class="about-text">
+                        Hi! I am a second-year Master's student in Computer Science at Columbia University, advised by <a href="https://www.aqlab.io/" class="prof-name" target="_blank">Mohammed AlQuraishi</a>. I completed my Bachelor's in Statistics and Computer Science at McGill University in May 2024, where I worked with <a href="https://junding.lab.mcgill.ca/" class="prof-name" target="_blank">Jun Ding</a> on ML for single-cell genomics and VAEs for spatial transcriptomics, <a href="https://khadralab.github.io/" class="prof-name" target="_blank">Anmar Khadra</a> on MCMC methods and probabilistic modeling for binding dynamics simulation, and <a href="https://cs.mcgill.ca/~hatami/" class="prof-name" target="_blank">Hamed Hatami</a> on ML theory, randomized algorithms and communication complexity.
+                    </p>
+                    <div class="about-text">
+                        <p style="margin-bottom: 10px;"><strong>My research focuses on advancing foundation models and their efficient deployment across diverse data modalities:</strong></p>
+                        <ul style="margin-top: 8px; padding-left: 20px; line-height: 1.7;">
+                            <li><strong>Efficient large-scale model architectures:</strong> Foundation models, self-supervised learning, and speculative decoding techniques for computational acceleration</li>
+                            <li><strong>Long-context modeling for scientific applications:</strong> Large language models for genomic sequences and other high-dimensional biological data</li>
+                            <li><strong>Multimodal intelligence:</strong> Vision-language models, text-to-video generation, and cross-modal understanding</li>
+                        </ul>
+                    </div>
+                </section>
 
-    <!-- Leadership and Extracurricular Activities Section -->
-    <section class="leadership">
-        <h2>Leadership and Extracurricular Activities</h2>
-        <ul>
-            <li>Course Assistant at McGill University - Assisted in Math235 Algebra, Math240 Discrete Math, Math356 Honour Probability and Math308 Fundamentals of Statistical Learning. </li>
-            <!-- Additional activities -->
-            <li>Active volunteer and donor at Note Bank, dedicated to supporting students with disabilities  </li>      </ul>
-    </section>
-    <footer>
-        <p>Last updated on 2024.04.02 - Copyright <a href="https://github.com/haleyyy2001">Huilin Tai</a></p>
-    </footer>
+                <!-- Experience -->
+                <section id="experience" class="section">
+                    <h2 class="section-title">Professional Experience</h2>
+                    
+                    <div class="exp-item">
+                        <div class="exp-header">
+                            <div class="exp-company">The Feinstein Institutes</div>
+                            <div class="exp-date">May 2025 - Sep 2025</div>
+                        </div>
+                        <div class="exp-title">Data Scientist Intern</div>
+                        <div class="exp-desc">
+                            <ul>
+                                <li>Designed comprehensive experimental framework for multi-class response prediction across treatment conditions using PyTorch, Docker, MLflow, and Scikit-learn</li>
+                                <li>Built CI/CD-ready PyTorch pipeline with memory-optimized preprocessing and automated quality control, deployed on HPC clusters via Docker and MLflow for reproducible ML workflows</li>
+                                <li>Developed comparative evaluation system for spatial clustering algorithms (SpaGCN, Leiden, BANKSY, COVET) with integrated MLflow tracking and interactive Plotly dashboards</li>
+                                <li>Achieved 0.85 Silhouette Score improvement in clustering performance with comprehensive visualization and statistical validation</li>
+                            </ul>
+                        </div>
+                    </div>
 
+                    <div class="exp-item">
+                        <div class="exp-header">
+                            <div class="exp-company">Columbia University - <a href="https://www.aqlab.io/" class="lab-link" target="_blank">AlQuraishi Lab</a></div>
+                            <div class="exp-date">Aug 2024 - Present</div>
+                        </div>
+                        <div class="exp-title">ML Research Assistant (Prof. Mohammed AlQuraishi)</div>
+                        <div class="exp-desc">
+                            <ul>
+                                <li>Engineered production-scale genomic classification pipeline using autoregressive Evo model with custom transformer block extraction and MLflow experiment tracking</li>
+                                <li>Implemented distributed GPU infrastructure setup for reproducible large-scale genomic inference with automated model versioning</li>
+                                <li>Optimized memory-efficient distributed system featuring block-wise compression, float16 precision, and HDF5-based active caching</li>
+                                <li>Achieved 10x memory reduction enabling full-genome processing on multi-GPU clusters through manual transformer iteration and parallel batch processing</li>
+                                <li>Developed robust cross-validation benchmarking framework with leave-n-species-out evaluation comparing classic AMR prediction model Kover with Evo</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="exp-item">
+                        <div class="exp-header">
+                            <div class="exp-company">McGill University - <a href="https://junding.lab.mcgill.ca/" class="lab-link" target="_blank">Ding Lab</a></div>
+                            <div class="exp-date">Dec 2022 - May 2024</div>
+                        </div>
+                        <div class="exp-title">Research Assistant (Prof. Jun Ding)</div>
+                        <div class="exp-desc">
+                            <ul>
+                                <li>Collaborated with <a href="https://www.ladydavisinstitute.ca/" class="lab-link" target="_blank">Lady Davis Institute</a>, Segal Cancer Centre, and <a href="https://www.dartmouth-hitchcock.org/cancer-center" class="lab-link" target="_blank">Dartmouth Cancer Center</a> for large-scale data mining of multi-terabyte single-cell datasets</li>
+                                <li>Fine-tuned unsupervised models for clustering PBMCs using PCA and UMAP, discovering pathogenic cell subsets and transcriptional signatures</li>
+                                <li>Developed CellSexID tool achieving 96% sex prediction accuracy via ensemble modeling (XGBoost, Random Forest, SVM) and Bayesian hyperparameter optimization</li>
+                                <li>Designed Variational Autoencoder with integrated Stochastic Variational Inference for spatial transcriptomics data analysis across diverse tissue types</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="exp-item">
+                        <div class="exp-header">
+                            <div class="exp-company">McGill University - <a href="https://cs.mcgill.ca/~hatami/" class="lab-link" target="_blank">Hatami Group</a></div>
+                            <div class="exp-date">Sep 2023 - Apr 2024</div>
+                        </div>
+                        <div class="exp-title">Research Assistant (Prof. Hamed Hatami)</div>
+                        <div class="exp-desc">
+                            <ul>
+                                <li>Devised randomized group-testing algorithm protocol to estimate Hamming distance between two n-bit strings, reducing communication complexity upper bound from O(log n) to O(log log n)</li>
+                                <li>Investigated excess-error dependent replicability in agnostic learning, designing algorithms for covering hypothesis classes with finite VC dimensions for accurate empirical error approximation</li>
+                                <li>Applied adaptive testing algorithms to improve efficiency in randomized Hamming distance estimation with focus on communication-optimal protocols</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="exp-item">
+                        <div class="exp-header">
+                            <div class="exp-company">McGill University - <a href="https://khadralab.github.io/" class="lab-link" target="_blank">Khadra Lab</a></div>
+                            <div class="exp-date">Nov 2022 - Jan 2024</div>
+                        </div>
+                        <div class="exp-title">Research Assistant (Prof. Anmar Khadra)</div>
+                        <div class="exp-desc">
+                            <ul>
+                                <li>Implemented advanced probabilistic frameworks in MATLAB to model nanoparticle binding dynamics, correlating IFN-γ dosage and pMHC valence with experimental validation</li>
+                                <li>Optimized serial engagement model through Markov Chain Monte Carlo (MCMC) simulations for T-cell activation analysis under geometric constraints</li>
+                                <li>Developed MATLAB computational framework leveraging randomization algorithms to calculate binding capacities and visualize TCR surface distribution probabilities for multivalent nanoparticle therapies</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="exp-item">
+                        <div class="exp-header">
+                            <div class="exp-company">Harbin Medical University</div>
+                            <div class="exp-date">May 2021 - Sep 2022</div>
+                        </div>
+                        <div class="exp-title">Data Scientist Intern</div>
+                        <div class="exp-desc">
+                            <ul>
+                                <li>Constructed comprehensive survival analysis framework to estimate targeting uridine-cytidine kinase 2 impact on hepatocellular carcinoma immune response with interactive R monogram for clinical validation</li>
+                                <li>Led pivotal SPARC gene study on ovarian cancer prognosis employing Kaplan-Meier survival analysis with log-rank test validation and GSEA pathway enrichment analysis</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="exp-item">
+                        <div class="exp-header">
+                            <div class="exp-company">Yooden Technology</div>
+                            <div class="exp-date">Oct 2020 - Feb 2021</div>
+                        </div>
+                        <div class="exp-title">Data Analyst</div>
+                        <div class="exp-desc">
+                            <ul>
+                                <li>Engineered real-time streaming data pipeline for energy-saving robots in data centers, ingesting multi-sensor streams with SQL-based storage and ETL transformations</li>
+                                <li>Implemented anomaly detection logic and automated monitoring systems for proactive power consumption optimization</li>
+                                <li>Built interactive dashboards and automated load-balancing alerts using Python (Pandas, NumPy, Matplotlib) with containerized Docker deployment</li>
+                                <li>Integrated scheduling workflows enabling real-time energy optimization and improved system reliability across data center operations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Publications -->
+                <section id="publications" class="section">
+                    <h2 class="section-title">Publications</h2>
+                    
+                    <div class="pub-item">
+                        <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/pii/S2667237525002176" class="lab-link" target="_blank">CellSexID: Sex-Based Computational Tracking of Cellular Origins in Chimeric Models</a></div>
+                        <div class="pub-authors"><strong>Huilin Tai</strong>, Qian Li, Jingtao Wang, Jiahui Tan, Ryann Lang, Basil J. Petrof, Jun Ding</div>
+                        <div class="pub-venue">Cell Reports Methods (Accepted, 2025)</div>
+                    </div>
+
+                    <div class="pub-item">
+                        <div class="pub-title"><a href="https://arxiv.org/html/2509.11961v1" class="lab-link" target="_blank">Spec-LLaVA: Accelerating Vision-Language Models with Dynamic Tree-Based Speculative Decoding</a></div>
+                        <div class="pub-authors">Mingxiao Huo, Jiayi Zhang, Hewei Wang, Jinfeng Xu, Zheyu Chen, <strong>Huilin Tai</strong>, Ian Yijun Chen</div>
+                        <div class="pub-venue">TTODLer Workshop at ICML 2025 (2025)</div>
+                    </div>
+
+                    <div class="pub-item">
+                        <div class="pub-title"><a href="https://ieeexplore.ieee.org/document/10678444" class="lab-link" target="_blank">T2VBench: Benchmarking Temporal Dynamics for Text-to-Video Generation</a></div>
+                        <div class="pub-authors">Pengliang Ji, Chuyang Xiao, <strong>Huilin Tai</strong>, Mingxiao Huo</div>
+                        <div class="pub-venue">ACM Multimedia Conference (2024)</div>
+                    </div>
+
+                    <div class="pub-item">
+                        <div class="pub-title"><a href="https://pubmed.ncbi.nlm.nih.gov/38702968/" class="lab-link" target="_blank">Ependymal cells undergo astrocyte-like reactivity in response to neuroinflammation</a></div>
+                        <div class="pub-authors">Adam M.R. Groh, Nina Caporicci-Dinucci, Brianna Lu, [...], <strong>Huilin Tai</strong>, Jun Ding, [...], Jo Anne Stratton</div>
+                        <div class="pub-venue">Journal of Neurochemistry (2024)</div>
+                    </div>
+
+                    <div class="pub-item">
+                        <div class="pub-title"><a href="https://www.imrpress.com/journal/CEOG/51/3/10.31083/j.ceog5103061/htm" class="lab-link" target="_blank">SPARC is a novelty prognostic biomarker for ovarian cancer and associated with immune signatures and drug response</a></div>
+                        <div class="pub-authors">Xiaorong Guo, <strong>Huilin Tai</strong>, Xiaoqing Li, Peng Liu, Jin Liu, Shan Yu</div>
+                        <div class="pub-venue">Clinical and Experimental Obstetrics & Gynecology (2024)</div>
+                    </div>
+
+                    <div class="pub-item">
+                        <div class="pub-title"><a href="https://cmbl.biomedcentral.com/articles/10.1186/s11658-022-00403-y" class="lab-link" target="_blank">Targeting uridine-cytidine kinase 2 induced cell cycle arrest through dual mechanism and could improve the immune response of hepatocellular carcinoma</a></div>
+                        <div class="pub-authors">Dehai Wu, Congyi Zhang, [...], <strong>Huilin Tai</strong>, [...], Sheng Tai</div>
+                        <div class="pub-venue">Cellular & Molecular Biology Letters, 105 (2022)</div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column -->
+            <div class="right-column">
+                <!-- Education -->
+                <section id="education" class="section">
+                    <h2 class="section-title">Education</h2>
+                    
+                    <div class="edu-item">
+                        <div class="edu-header">
+                            <div class="edu-school">Columbia University</div>
+                            <div class="edu-date">2024-2025</div>
+                        </div>
+                        <div class="edu-degree">Master of Computer Science</div>
+                        <div class="edu-gpa">GPA: 4.0/4.0</div>
+                    </div>
+
+                    <div class="edu-item">
+                        <div class="edu-header">
+                            <div class="edu-school">McGill University</div>
+                            <div class="edu-date">2020-2024</div>
+                        </div>
+                        <div class="edu-degree">Bachelor of Statistics and Computer Science</div>
+                        <div class="edu-gpa">GPA: 3.86/4.0</div>
+                    </div>
+                </section>
+
+
+                <!-- News -->
+                <section class="section">
+                    <h2 class="section-title">Recent News</h2>
+                    
+                    <div class="news-item">
+                        <div class="news-date">Jan 2025</div>
+                        <div class="news-content">🎉 CellSexID paper accepted at <em>Cell Reports Methods</em></div>
+                    </div>
+                    
+                    <div class="news-item">
+                        <div class="news-date">Jan 2025</div>
+                        <div class="news-content">📝 Spec-LLaVA accepted at ICML 2025 TTODLer Workshop</div>
+                    </div>
+                    
+                    <div class="news-item">
+                        <div class="news-date">Aug 2024</div>
+                        <div class="news-content">🎓 Started MS at Columbia University</div>
+                    </div>
+                    
+                    <div class="news-item">
+                        <div class="news-date">Jul 2024</div>
+                        <div class="news-content">📚 T2VBench accepted at ACM Multimedia 2024</div>
+                    </div>
+                    
+                    <div class="news-item">
+                        <div class="news-date">May 2024</div>
+                        <div class="news-content">🎊 Graduated from McGill University</div>
+                    </div>
+                    
+                    <div class="news-item">
+                        <div class="news-date">Apr 2024</div>
+                        <div class="news-content">🧠 Published neuroinflammation research in <em>Journal of Neurochemistry</em></div>
+                    </div>
+                </section>
+
+                <!-- Awards -->
+                <section class="section">
+                    <h2 class="section-title">Honors & Awards</h2>
+                    
+                    <div class="award-item">
+                        <div class="award-name">🏆 Mackey-Glass Summer Research Bursary</div>
+                        <div class="award-org">McGill Faculty of Medicine • April 2023</div>
+                    </div>
+                    
+                    <div class="award-item">
+                        <div class="award-name">🎓 Hugh Brock Scholarship</div>
+                        <div class="award-org">McGill University • September 2020</div>
+                    </div>
+                    
+                    <div class="award-item">
+                        <div class="award-name">📊 Dean's Honor List</div>
+                        <div class="award-org">McGill University • Multiple Semesters</div>
+                    </div>
+                </section>
+
+                <!-- Extracurricular -->
+                <section id="activities" class="section">
+                    <h2 class="section-title">Activities</h2>
+                    
+                    <div class="exp-item">
+                        <div class="exp-header">
+                            <div class="exp-company">KAUST</div>
+                            <div class="exp-date">May-Sep 2024</div>
+                        </div>
+                        <div class="exp-title">Research Associate</div>
+                        <div class="exp-desc">
+                            Designed generative model architecture with Beta-VAE for video editing. Conducted literature analysis of 10+ papers in generative modeling.
+                        </div>
+                    </div>
+                    
+                    <div class="exp-item">
+                        <div class="exp-header">
+                            <div class="exp-company">McGill University</div>
+                            <div class="exp-date">Sep 2022-May 2024</div>
+                        </div>
+                        <div class="exp-title">Course Assistant</div>
+                        <div class="exp-desc">
+                            Math235 Algebra, Math240 Discrete Math, Math308 Statistical Learning, Math356 Honor Probability. Graded 20+ assignments across multiple courses.
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Contact -->
+                <section id="contact" class="section">
+                    <h2 class="section-title">Contact</h2>
+                    <div style="text-align: center; color: var(--text-secondary); font-size: 0.9rem;">
+                        <p style="margin-bottom: 10px;">
+                            <strong>Email:</strong> <a href="mailto:ht2666@columbia.edu" style="color: #FFA500; text-decoration: none; border-bottom: 1px dashed #FFA500;">ht2666@columbia.edu</a>
+                        </p>
+                        <p style="margin-bottom: 10px;">
+                            <strong>Phone:</strong> (646) 866-9171
+                        </p>
+                        <p style="margin-bottom: 15px;">
+                            <strong>Location:</strong> New York, NY
+                        </p>
+                        <p style="font-size: 0.85rem; color: var(--text-light);">
+                            Feel free to reach out for research collaborations, opportunities, or just to connect!
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Enhanced navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const navItems = document.querySelectorAll('.nav-item');
+            const sections = document.querySelectorAll('section[id]');
+            
+            // Add click event listeners to nav items
+            navItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove active class from all nav items
+                    navItems.forEach(nav => nav.classList.remove('active'));
+                    
+                    // Add active class to clicked item
+                    this.classList.add('active');
+                    
+                    // Scroll to target section with offset for fixed navbar
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                        const elementPosition = targetSection.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - navbarHeight - 20;
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Update active nav item on scroll with improved detection
+            let ticking = false;
+            
+            function updateActiveNav() {
+                const scrollPos = window.pageYOffset + 120; // Offset for navbar
+                let current = 'about'; // Default to first section
+                let minDistance = Infinity;
+                
+                // Find the section that's closest to the top of the viewport
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    const sectionCenter = sectionTop + (sectionHeight / 2);
+                    const distance = Math.abs(scrollPos - sectionCenter);
+                    
+                    // If this section is closer to viewport center, make it active
+                    if (distance < minDistance && scrollPos >= sectionTop - 100) {
+                        minDistance = distance;
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                // Only update if the active section has actually changed
+                const currentActive = document.querySelector('.nav-item.active');
+                if (!currentActive || currentActive.getAttribute('href').substring(1) !== current) {
+                    navItems.forEach(item => {
+                        item.classList.remove('active');
+                        if (item.getAttribute('href').substring(1) === current) {
+                            item.classList.add('active');
+                        }
+                    });
+                }
+                
+                ticking = false;
+            }
+
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    requestAnimationFrame(updateActiveNav);
+                    ticking = true;
+                }
+            });
+
+            // Initialize with first item active
+            if (navItems.length > 0) {
+                navItems[0].classList.add('active');
+            }
+        });
+    </script>
 </body>
-
-
 </html>
