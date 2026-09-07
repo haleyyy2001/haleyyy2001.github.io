@@ -20,8 +20,10 @@ mathematics without deciding what it was for, enjoying the theorems and the
 question of what came next. Certain subjects came to feel deeply intuitive to
 me, like analysis and abstract algebra, where the structure is the whole of
 the object. Statistics, interestingly, did not, even when I did understand a
-concept. Maybe because statistics is more observed than defined, and I had
-been expecting a pure abstract world.
+concept. Maybe because it begins with an observed world and asks what
+structure can be found in it, a bottom-up reversal of the way I was used to
+thinking. I ended up with a degree in statistics anyway, and it has been
+useful ever since. Intuition and competence turned out to be separable.
 
 Later I added a CS major, nudged by the SDE hype around 2021, even though deep
 down I knew I was no geek material. I struggled with some systems classes,
