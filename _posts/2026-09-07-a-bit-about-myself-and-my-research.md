@@ -35,11 +35,11 @@ mathematics I liked, and it made that mathematics the main instrument rather tha
 a prerequisite. I guess that was when I first found a place for myself in CS.
 
 In the meantime I jumped around looking for research. Survival analysis for
-cancer. Statistical modeling for nanoparticle drug design and binding dynamics.
-Single-cell ML model training. Unsupervised learning algorithm development. At
-some point I also jumped into learning theory to see whether there was a spot for
-me there. At the end of the day, not much. I came out with a long CV of
-experiences that had nothing to do with each other.
+cancer. Statistical modeling for nanoparticle drug design and binding
+dynamics. Single-cell ML model training. Unsupervised learning algorithm
+development. At some point I also jumped into learning theory to see whether
+there was a spot for me. At the end of the day, not much. I came out with a
+long CV of experiences that had nothing to do with each other.
 
 For my master's I picked Columbia for the theory cohort and ended up in a genome
 and protein language model lab. I was exposed to more frontier AI4S research and
