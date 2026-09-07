@@ -50,14 +50,14 @@ applications to cancer research — biology and computer science, the two subjec
 I swore years ago I would never do. It's funny how life turns out, because after
 the big circle I am back working on cancer, where my research journey started.
 
-For years I would look at my CV and feel sad that I could find no way to explain
-my path. Now my scattered experience has finally found its unifying place in
-multimodal AI for cancer research: survival, genomics, single cell, spatial
-proteomics and transcriptomics, protein, explainability, even a bit of theory. It
-is also astonishing how much the field has changed. Back at the start I was
-pulling expression matrices out of public databases and running regressions to
-validate a single marker; now people are reading slides with foundation models
-and designing proteins to shorten the path to a therapy.
+For years I would look at my CV and feel sad that I couldn't find a way to
+explain my path. Now my scattered experience has finally found its unifying
+place in multimodal AI for cancer research: survival, genomics, single cell,
+spatial proteomics and transcriptomics, protein, explainability, even a bit of
+theory. It is also astonishing how much the field has changed. Back at the
+start I was pulling expression matrices out of public databases and running
+regressions to validate a single marker; now people are reading slides with
+foundation models and designing proteins to shorten the path to a therapy.
 
 My research is now moving toward the thing that unsettles me most: that I cannot
 find much structure in biology, and I have never been good at remembering
