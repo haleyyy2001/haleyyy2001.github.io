@@ -14,7 +14,7 @@ day.
 
 I have always enjoyed mathematics. Before college I was convinced I would be a
 math teacher someday, until I realized it would mean either a degree in
-education or, for academia, deep roots in pure math, and either way a decision
+education or, for academia, deep roots in pure math. Either way a decision
 made very early, which felt like a one-way road with no turns. So I stayed
 with mathematics without deciding what it was for, enjoying the theorems and
 the question of what came next. Certain subjects came to feel deeply intuitive
