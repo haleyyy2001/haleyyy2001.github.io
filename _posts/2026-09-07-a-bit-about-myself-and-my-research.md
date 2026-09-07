@@ -13,14 +13,15 @@ conventions I never quite picked up, and a few rounds of them would use up my
 day.
 
 I have always enjoyed mathematics. Before college I was convinced I would be a
-math teacher someday, until I realized that academia would mean either a degree
-in education or deep roots in pure math, and either way a decision made very
-early, which felt like a one-way road with no turns. So I stayed with mathematics
-without deciding what it was for, enjoying the theorems and the question of what
-came next. Certain subjects came to feel deeply intuitive to me, analysis and
-group theory especially. Statistics, interestingly, did not, even when I did
-understand a concept. Maybe because statistics is more observed than defined, and
-I had been expecting a pure abstract world.
+math teacher someday, until I realized that academia would mean either a
+degree in education or deep roots in pure math, and either way a decision made
+very early, which felt like a one-way road with no turns. So I stayed with
+mathematics without deciding what it was for, enjoying the theorems and the
+question of what came next. Certain subjects came to feel deeply intuitive to
+me, like analysis and abstract algebra, where the structure is the whole of
+the object. Statistics, interestingly, did not, even when I did understand a
+concept. Maybe because statistics is more observed than defined, and I had
+been expecting a pure abstract world.
 
 Later I added a CS major, nudged by the SDE hype around 2021, even though deep
 down I knew I was no geek material. I struggled with some systems classes,
