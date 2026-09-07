@@ -17,8 +17,8 @@ math teacher someday, until I realized that academia would mean either a degree
 in education or deep roots in pure math, and either way a decision made very
 early, which felt like a one-way road with no turns. So I stayed with mathematics
 without deciding what it was for, enjoying the theorems and the question of what
-came next. Certain subjects came to feel deeply intuitive to me, abstract algebra
-and group theory especially. Statistics, interestingly, did not, even when I did
+came next. Certain subjects came to feel deeply intuitive to me, analysis and
+group theory especially. Statistics, interestingly, did not, even when I did
 understand a concept. Maybe because statistics is more observed than defined, and
 I had been expecting a pure abstract world.
 
