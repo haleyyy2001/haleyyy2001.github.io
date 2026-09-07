@@ -13,12 +13,12 @@ conventions I never quite picked up, and a few rounds of them would use up my
 day.
 
 I have always enjoyed mathematics. Before college I was convinced I would be a
-math teacher someday, until I realized that academia would mean either a
-degree in education or deep roots in pure math, and either way a decision made
-very early, which felt like a one-way road with no turns. So I stayed with
-mathematics without deciding what it was for, enjoying the theorems and the
-question of what came next. Certain subjects came to feel deeply intuitive to
-me, like analysis and abstract algebra, where the structure is the whole of
+math teacher someday, until I realized it would mean either a degree in
+education or, for academia, deep roots in pure math, and either way a decision
+made very early, which felt like a one-way road with no turns. So I stayed
+with mathematics without deciding what it was for, enjoying the theorems and
+the question of what came next. Certain subjects came to feel deeply intuitive
+to me, like analysis and abstract algebra, where the structure is the whole of
 the object. Statistics, interestingly, did not, even when I did understand a
 concept. Maybe because it begins with an observed world and asks what
 structure can be found in it, a bottom-up reversal of the way I was used to
