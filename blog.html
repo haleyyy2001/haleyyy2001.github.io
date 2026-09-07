@@ -1,0 +1,35 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+description: Notes and writing by Huilin Tai on multimodal models for cancer research, evaluation, and explainability.
+---
+
+<section class="section-narrow">
+  <h2>Blog</h2>
+
+  <p class="blog-intro">
+    Notes on things I am reading, building, or still confused about.
+  </p>
+
+  {% if site.posts.size > 0 %}
+  <div class="post-list">
+    {% for post in site.posts %}
+    <div class="post-list-item">
+      <div class="post-list-date">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+      </div>
+      <div class="post-list-text">
+        <a class="post-list-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <p class="post-list-excerpt">
+          {{ post.description | default: post.excerpt | strip_html | truncate: 200 }}
+        </p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p>No posts yet — first one coming soon.</p>
+  {% endif %}
+
+</section>

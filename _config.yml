@@ -1,1 +1,19 @@
-theme: jekyll-theme-cayman
+title: Huilin Tai
+description: Personal website of Huilin Tai, first-year PhD student in Computer Science at Rice University.
+url: https://haleyyy2001.github.io
+baseurl: ""
+
+# Posts live at /blog/<filename-slug>/
+permalink: /blog/:title/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+exclude:
+  - run.bat
+  - agreement.txt
+  - delete_all.txt
+  - Huilin_Tai_cv.docx
+  - README.md
