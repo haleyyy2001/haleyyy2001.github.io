@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Two Talks and a Hometown"
+title: "Two talks and a hometown"
 description: "Notes from the AI in Health Conference in Houston: a talk on ethics in social robotics, a talk on AI for surgery, and why need, capability, and adoption matter equally."
 tags: [conference, notes]
 ---
