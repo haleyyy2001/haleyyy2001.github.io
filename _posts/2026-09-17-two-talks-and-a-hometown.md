@@ -5,7 +5,7 @@ description: "Notes from the AI in Health Conference in Houston: a talk on ethic
 tags: [conference, notes]
 ---
 
-*Notes from the AI in Health Conference, September 15–17, 2026 | Houston, TX*
+*Notes from the AI in Health Conference, Houston, TX, September 15–17, 2026.*
 
 I spent the past two days at the AI in Health Conference, listening to talks on
 multimodal AI, healthcare, and surgical robotics. Most of what I work on lives
